@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -12,7 +12,7 @@ import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
-const ExperienceCard = ({ experience }) => {
+const ExperienceCard = ({ experience, isInView }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -31,6 +31,8 @@ const ExperienceCard = ({ experience }) => {
           />
         </div>
       }
+      initial={!isInView ? "hidden" : undefined}
+      animate={isInView ? "show" : "hidden"}
     >
       <div>
         <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
@@ -57,23 +59,50 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experience = () => {
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const element = document.getElementById("experience");
+      if (!element) return;
+
+      const rect = element.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight - 50 && rect.bottom > 0;
+
+      setIsInView(isVisible);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant()}
+       initial={!isInView ? "hidden" : undefined}
+       animate={isInView ? "show" : "hidden"}
+      >
         <p className={`${styles.sectionSubText} text-center`}>
-          What I have done so far
+        Our Web Development Services
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
-          Work Experience.
+        Your Web Solution Awaits!
         </h2>
       </motion.div>
 
-      <div className='mt-20 flex flex-col'>
+      <div id="experience" className='mt-20 flex flex-col'>
         <VerticalTimeline>
           {experiences.map((experience, index) => (
             <ExperienceCard
+           
               key={`experience-${index}`}
               experience={experience}
+              isInView={isInView}
+             initial={!isInView ? "hidden" : undefined}
+            animate={isInView ? "show" : "hidden"}
             />
           ))}
         </VerticalTimeline>
