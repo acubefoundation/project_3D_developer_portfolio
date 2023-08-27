@@ -20,6 +20,9 @@ import {
   tesla,
   shopify,
   carrent,
+  amazon,
+  netflix,
+  ev_forum,
   jobit,
   tripguide,
   threejs,
@@ -198,6 +201,81 @@ const testimonials = [
 
 const projects = [
   {
+    name: "netflix clone",
+    description:
+      "Discover the ultimate React-built Netflix clone. Streamline your entertainment with smooth navigation, personalized suggestions, and secure authentication. Your favorite movies and shows are just a click away!",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "api",
+        color: "green-text-gradient",
+      },
+      {
+        name: "frontend",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: netflix,
+    source_code_link: "https://aa-netflix-clone.web.app",
+  },
+   {
+    name: "Amazon clone",
+    description:
+      "Experience the essence of Amazon through our React-powered clone. Shop seamlessly with user-friendly design, secure authentication, and dynamic product showcases. Your online shopping journey, reimagined.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "stripe",
+        color: "green-text-gradient",
+      },
+      {
+        name: "backend",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "frontend",
+        color: "red-text-gradient",
+      },
+    ],
+    image: amazon,
+    source_code_link: "https://aa-amaz-clone.web.app",
+  },
+  {
+    name: "evangadi forum",
+    description:
+      "Dive into the world of Evangadi with our React-based forum clone. Engage in vibrant discussions, connect with like-minded individuals, and explore topics you're passionate about. Your gateway to a thriving online community.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "frontend",
+        color: "green-text-gradient",
+      },
+      {
+        name: "backend",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "api",
+        color: "red-text-gradient",
+      },
+      {
+        name: "database",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: ev_forum,
+    source_code_link: "https://aa-evangadi-forum.web.app/",
+  },
+  {
     name: "Car Rent",
     description:
       "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
@@ -216,7 +294,55 @@ const projects = [
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://rentcar-now.vercel.app/",
+  },
+  
+  {
+    name: "Trip Guide",
+    description:
+      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "supabase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: tripguide,
+    source_code_link: "https://travel-advisor.netlify.app/",
+  },
+  {
+    name: "Abe Garag",
+    description:
+      "Revolutionary auto workflow app: Powered by cutting-edge web tech, it streamlines end-to-end operations. Manage staff, services, registration, and vehicle data seamlessly. Unleash unparalleled efficiency.",
+    tags: [
+     
+      {
+        name: "api",
+        color: "red-text-gradient",
+      },
+      {
+        name: "database",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "buisness development",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "project scope",
+        color: "green-text-gradient",
+      },
+    ],
+    image: carrent,
+    source_code_link: "https://coming-soon-tau-fawn.vercel.app/",
   },
   {
     name: "Job IT",
@@ -237,28 +363,7 @@ const projects = [
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://coming-soon-tau-fawn.vercel.app/",
   },
 ];
 
