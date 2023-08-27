@@ -21,6 +21,7 @@ import {
   shopify,
   carrent,
   amazon,
+  abe,
   netflix,
   ev_forum,
   jobit,
@@ -341,7 +342,7 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    image: carrent,
+    image: abe,
     source_code_link: "https://coming-soon-tau-fawn.vercel.app/",
   },
   {

@@ -33,8 +33,10 @@ import tripguide from "./tripguide.png";
 import amazon from "./apple.png";
 import netflix from "./netflix.png";
 import ev_forum from "./evan-forum.png";
+import abe from "./abe-garag.png";
 
 export {
+  abe,
   view,
   amazon,
   netflix,
